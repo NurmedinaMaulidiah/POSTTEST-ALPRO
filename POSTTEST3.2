@@ -1,0 +1,30 @@
+print ("""=======================================================
+            WELCOME
+ ================================================================
+ option :
+    1. Login
+    2. Register
+==================================================================
+
+""")
+option = str(input( "pilih  menu untuk masuk (misal : 1 dan 2):" ))
+i=3
+while i>=1:
+    if option == "1" :
+        nama=input("masukan username anda :")
+        sandi=input("masukan password :")
+        if nama == 'dinamauldh' and sandi == 'allah':
+            print ("Anda Telah Login")
+            print ("selamat datang kembali")
+            break
+            
+        else:
+            i-=1
+            print("gagal login, sisa percobaan login adalah :", i )
+            
+    if option == "2" :
+        print ("masukkan nama pengguna dan kata sandi untuk daftar ")
+        nama : input("masukkan nama penguna anda :")
+        sandi : input("masukkan sandi anda :")
+        print ("SELAMAT DATANG")
+        break
