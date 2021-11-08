@@ -1,0 +1,133 @@
+print ("""=======================================================
+                        BUMDES CAFE
+                            MENU
+ ================================================================""")
+                      
+while True:
+    menu = [
+    [" Croffle",   50000],
+    [" Waffle",   50000],
+    [" Americano",   35000],
+    [" Caramel Machiatto",   55000],
+    [" Asian Dolce Latte" ,65000],
+    ]
+    print("a.",menu[0])
+    print("b.",menu[1])
+    print("c.",menu[2])
+    print("d.",menu[3])
+    print("e.",menu[4])
+
+    print(""" apa yang ingin anda lakukan terhadap menu? :
+            1. MenambahMenu dari Belakang
+            2. Menambah Menu dari Tengah
+            3. Menghapus Menu cara 1
+            4. Menghapus Menu cara 2
+            5. Mengubah Nama Menu
+            """)
+
+    pilih= str(input( "pilih menu (misal : 1, 2, 3, 4,5):" ))
+    if pilih =="1":
+        tambah=input("tambah menu di belakang?(y/t)")
+        if tambah =="y":
+            Tambah_menu=[]
+            tambahnomor=str(input("masukkan daftar abjad menu yang ingin ditambahkan :"))
+            tambahnama=str(input("masukkan nama menu yang baru :"))
+            tambahharga=int(input("masukkan harga menu baru :"))
+            
+            Tambah_menu.append(tambahnama)
+            Tambah_menu.append(tambahharga)
+            menu.append(Tambah_menu)
+            print("a.",menu[0])
+            print("b.",menu[1])
+            print("c.",menu[2])
+            print("d.",menu[3])
+            print("e.",menu[4])
+            print(tambahnomor,"." ,menu[5])
+            print("\nMenu", menu[5][1], "berhasil Ditambahkan")
+        
+    elif pilih == "2" :
+        tambah=input("tambah menu di tengah?(y/t)")
+        if tambah == "y":
+            Tambah_menu=[]
+            tambahnomor=str(input("masukkan daftar abjad menu yang ingin ditambahkan :"))
+            tambahnama=str(input("masukkan nama menu yang baru :"))
+            tambahharga=int(input("masukkan harga menu baru :"))
+            Tambah_menu.insert(1,tambahnama)
+            Tambah_menu.insert(2,tambahharga)
+            menu.insert(3,Tambah_menu)
+            print("a.",menu[0])
+            print("b.",menu[1])
+            print("c.",menu[2])
+            print(tambahnomor,".",menu[3])
+            print("e.",menu[4])
+            print("f.", menu[5])
+            print("\nMenu", menu[3][0], "berhasil Ditambahkan")
+    elif pilih == "3":
+        print("pilih menu yang akan dihapus")
+        pilih= str(input( "pilih menu (misal : a, b, c, d,e):" ))
+        if pilih == "a" :
+            del menu[0]
+            print(menu)
+        elif pilih == "b" :
+            del menu[1]
+            print(menu)
+        elif pilih == "c" :
+            del menu[2]
+            print(menu)
+        elif pilih == "d" :
+            del menu[3]
+            print(menu)
+        else :
+            del menu[4]
+            print(menu)
+    elif pilih == "4" :
+        print("pilih menu yang akan dihapus")
+        pilih= str(input( "pilih menu (misal : a, b, c, d,e):" ))
+        if pilih == "a" :
+            print (menu.pop(0))
+        elif pilih == "b" :
+            print (menu.pop(1))
+        elif pilih == "c" :
+            print (menu.pop(2))
+        elif pilih == "d" :
+            print (menu.pop(3))
+            
+        else :
+            print (menu.pop(4))
+    elif pilih=="5":
+        print("pilih menu yang ingin diubah")
+        pilih= str(input( "pilih menu (misal : a, b, c, d,e):" ))
+        if pilih == "a" :
+            print(menu)
+            menubaru=input("masukkan menu baru :")
+            hargabaru =input('masukkan harga baru:')
+            menu[0]=[menubaru,hargabaru]
+            print(menu)
+        if pilih == "b" :
+            print(menu)
+            menubaru=input("masukkan menu baru :")
+            hargabaru =input('masukkan harga baru:')
+            menu[1]=[menubaru,hargabaru]
+            print(menu)
+        if pilih == "c" :
+            menubaru=input("masukkan menu baru :")
+            hargabaru =input('masukkan harga baru:')
+            menu[2]=[menubaru,hargabaru]
+            print(menu)
+        if pilih == "d" :
+            menubaru=input("masukkan menu baru :")
+            hargabaru =input('masukkan harga baru:')
+            menu[3]=[menubaru,hargabaru]
+            print(menu)
+        if pilih == "e" :
+            menubaru=input("masukkan menu baru:")
+            hargabaru =input('masukkan harga baru:')
+            menu[4]= [menubaru,hargabaru]
+            print(menu)
+    else :
+        print("kode tidak ada")
+    lanjut =input("lanjut(y/t)")
+    if lanjut =="t" :
+        print("")
+        print("TERIMAKASIHHHH!!!")
+        break
