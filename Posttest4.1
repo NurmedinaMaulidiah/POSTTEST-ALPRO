@@ -1,0 +1,103 @@
+print ("""=======================================================
+            BUMDES CAFE
+                MENU
+ ================================================================""")
+print ("""=======================================================
+            BUMDES CAFE
+                MENU
+ ================================================================""")
+total=0
+menu=[]
+harga=[]
+
+while True:
+    print(""" Daftar Menu\n
+    a. Croffle  \tRp 50.000
+    b. Waffle  \tRp 50.000
+    c. Americano \t Rp 35.000
+    d. Caramel Machiatto \t  Rp 55.000
+    e. Asian Dolce Latte \t Rp 65.000
+    """)
+    pesan = str(input( "pilih pesan menu (misal : a, b, c, d, e):" ))
+    
+    if pesan == "a":
+        menu.append("croffle")
+        harga.append(50000)
+        jumlah_pesanan=int(input("masukkan jumlah pesanan :"))
+        total =50000*jumlah_pesanan
+        if jumlah_pesanan >=2 :
+            diskon=int(0.05)
+            totalharga=total*0.05
+            print("anda mendapat diskon sebanyak 5%, jadi total yang harus dibayar adalah:", totalharga)
+        else:
+            print("anda tidak mendapatkan diskon")
+                       
+    elif pesan == "b":
+        menu.append("waffle")
+        harga.append(50000)
+        jumlah_pesanan=int(input("masukkan jumlah pesanan :"))
+        total =50000*jumlah_pesanan
+        if jumlah_pesanan >=2 :
+            diskon=int(0.05)
+            totalharga=total*0.05
+            print("anda mendapat diskon sebanyak 5%, jadi total yang harus dibayar adalah:", totalharga)
+        else:
+            print("anda tidak mendapatkan diskon")
+        
+    elif pesan == "c":
+        menu.append("americano")
+        harga.append(35000)
+        jumlah_pesanan=int(input("masukkan jumlah pesanan :"))
+        total =35000*jumlah_pesanan
+        if jumlah_pesanan >=2 :
+            diskon=int(0.1)
+            totalharga=total*0.1
+            print("anda mendapat diskon sebanyak 10%, jadi total yang harus dibayar adalah:", totalharga)
+        else:
+            print("anda tidak mendapatkan diskon")
+            
+    elif pesan == "d":
+        menu.append("caramel machiatto")
+        harga.append(55000)
+        jumlah_pesanan=int(input("masukkan jumlah pesanan :"))
+        total =55000*jumlah_pesanan
+        if jumlah_pesanan >=2 :
+            diskon=int(0.1)
+            totalharga=total*0.1
+            print("anda mendapat diskon sebanyak 10%, jadi total yang harus dibayar adalah:", totalharga)
+        else:
+            print("anda tidak mendapatkan diskon")
+    elif pesan == "e":
+        menu.append("asian dolce latte")
+        harga.append(65000)
+        jumlah_pesanan=int(input("masukkan jumlah pesanan :"))
+        total =65000*jumlah_pesanan
+        if jumlah_pesanan >=2 :
+            diskon=int(0.1)
+            totalharga=total*0.1
+            print("anda mendapat diskon sebanyak 10%, jadi total yang harus dibayar adalah:", totalharga)
+        else:
+            print("anda tidak mendapatkan diskon")
+    else:
+        print("kode tidak ada")
+    Metode_bayar = input("apakah bayar dengan emoney (Y/T) :")
+    if Metode_bayar == "Y" :
+        diskon = int(0.05)
+        totalHarga = totalharga*0.05
+        print  (" karena membayar dengan emoney anda mendapat diskon sebesar 5% jadi total harga:", totalHarga)
+    if Metode_bayar == "T" :
+        print  ("karena anda tidak mebayar dengan emoney anda tidak mendapat diskon jadi total harga Rp :", totalHarga)
+    
+    kapan = input("apakah beli saat weekend (Y/T) :")
+    if kapan == "Y" :
+        diskon = int(0.05)
+        totalHarga = totalHarga*0.05
+        print  ("karena anda mebeli pada saat weekend jadi anda mendapa diskon tambahan sebesar 5% jadi total harga Rp:", totalHarga)
+    if kapan == "T" :
+        diskon = int(0.1)
+        totalHarga = totalharga*0.1
+        print  ("karena anda membeli pada saat weekdays jadi anda mendapat diskon tambhan sebesar 10% total harga Rp:", totalHarga)
+    lanjut =input("lanjut belanja(y/t)")
+    if lanjut =="t" :
+        print("")
+        break
