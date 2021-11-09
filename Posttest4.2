@@ -77,47 +77,51 @@ while True:
         elif pilih == "d" :
             del menu[3]
             print(menu)
-        else :
+        elif pilih == "e" :
             del menu[4]
             print(menu)
     elif pilih == "4" :
         print("pilih menu yang akan dihapus")
         pilih= str(input( "pilih menu (misal : a, b, c, d,e):" ))
         if pilih == "a" :
-            print (menu.pop(0))
+            menu.remove(menu[0])
+            print(menu)
         elif pilih == "b" :
-            print (menu.pop(1))
+            menu.remove(menu[1])
+            print(menu)
         elif pilih == "c" :
-            print (menu.pop(2))
+            menu.remove(menu[2])
+            print(menu)
         elif pilih == "d" :
-            print (menu.pop(3))
-            
-        else :
-            print (menu.pop(4))
+            menu.remove(menu[3])
+            print(menu)
+        elif pilih == "e" :
+            menu.remove(menu[4])
+            print(menu)
     elif pilih=="5":
         print("pilih menu yang ingin diubah")
         pilih= str(input( "pilih menu (misal : a, b, c, d,e):" ))
         if pilih == "a" :
             print(menu)
-            menubaru=input("masukkan menu baru :")
-            hargabaru =input('masukkan harga baru:')
+            menubaru=input("masukkan menu baru")
+            hargabaru=input("masukkan harga baru :")
             menu[0]=[menubaru,hargabaru]
             print(menu)
         if pilih == "b" :
             print(menu)
             menubaru=input("masukkan menu baru :")
-            hargabaru =input('masukkan harga baru:')
+            hargabaru=input("masukkan harga baru :")
             menu[1]=[menubaru,hargabaru]
             print(menu)
         if pilih == "c" :
             menubaru=input("masukkan menu baru :")
-            hargabaru =input('masukkan harga baru:')
-            menu[2]=[menubaru,hargabaru]
+            hargabaru=input("masukkan harga baru :")
+            menu[2]=[menubaru, hargabaru]
             print(menu)
         if pilih == "d" :
             menubaru=input("masukkan menu baru :")
-            hargabaru =input('masukkan harga baru:')
-            menu[3]=[menubaru,hargabaru]
+            hargabaru=input("masukkan harga baru :")
+            menu[3]=[menubaru, hargabaru]
             print(menu)
         if pilih == "e" :
             menubaru=input("masukkan menu baru:")
@@ -131,3 +135,4 @@ while True:
         print("")
         print("TERIMAKASIHHHH!!!")
         break
+
