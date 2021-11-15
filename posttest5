@@ -1,0 +1,141 @@
+menu ={
+    "a. croffle":50000,
+    "b. waffle":50000,
+    "c. americano":35000,
+    "d. caramel macchiato":55000,
+    "e. asian dolce latte":65000,
+}
+print(menu)
+def show_data():
+    print(menu)
+def insert_data():
+    menu_baru = {}
+    menu_baru = (input("masukkan menu baru:"))
+    harga = (input("masukkan harga menu baru:"))
+    menu[menu_baru]=harga
+    print(menu)
+def edit_data():
+    print(menu)
+    print("pilih menu yang ingin diubah")
+    pilih= str(input( "pilih menu : " ))
+    if pilih == 'a' :
+        del menu['a. croffle']
+    elif pilih == 'b' :
+        del menu['b. waffle']
+    elif pilih == 'c' :
+        del menu['c. americano']
+    elif pilih == 'd' :
+        del menu['d. caramel macchiato']
+    elif pilih == 'e' :
+        del menu['e. asian dolce latte']
+    else :
+        print("Pilihan Tidak ada")
+    menubaru=input("masukkan menu baru :")
+    hargabaru=input("masukkan harga baru :")
+    menu[menubaru]=hargabaru
+    print(menu)
+
+       
+def delete_data():
+    print("Dictionary : %s" % menu) 
+    menuygdihapus = (input("masukkan menu yang akan dihapus:"))
+    del menu[menuygdihapus]
+    print(menu)
+def show_menu():
+    print ("\n")
+    print ("----------- MENU---------- ")
+    print ("[1] Show Data") 
+    print ("[2] Insert Data") 
+    print ("[3] Edit Data") 
+    print ("[4] Delete Data") 
+    print ("[5] belanja")
+    print ("[6] exit")
+    menu = input("\npilih menu:")
+    print()
+    if menu == "1": 
+        show_data()
+    elif menu == "2": 
+        insert_data()
+    elif menu == "3": 
+        edit_data()
+    elif menu == "4": 
+        delete_data()
+    elif menu == "5":
+        pesan = str(input( "pilih pesan menu (misal : a, b, c, d, e):" ))
+    
+        if pesan == "a":
+            print ("Croffle")
+            Jumlah_pesanan = int(input("masukkan jumlah pesanan ="))
+            harga = int(input("masukkan harga menu :"))
+            a=(harga*Jumlah_pesanan)
+            if Jumlah_pesanan >= 2:
+                diskon = int(a * 0.05)
+                totalHarga=int(diskon)
+                print  ("anda mendapat diskon sebesar 5% jadi total harga Rp:", totalHarga)
+        
+            
+        elif pesan == "b":
+            print ("Waffle")
+            Jumlah_pesanan = int(input("masukkan jumlah pesanan ="))
+            harga=int(input("masukkan harga menu :"))
+            b=(harga*Jumlah_pesanan)
+            if Jumlah_pesanan >= 2:
+                diskon = int(b*0.05)
+                print  ("anda mendapat diskon sebesar 5% jadi total harga Rp:", harga*Jumlah_pesanan*diskon)
+            
+        elif pesan == "c":
+            print ("Americano")
+            Jumlah_pesanan = int(input("masukkan jumlah pesanan ="))
+            harga=int(input("masukkan harga menu :"))
+            c=(harga*Jumlah_pesanan)
+            if Jumlah_pesanan >= 3:
+                diskon = int(c*0.1)
+                totalHarga=int(diskon)
+                print  ("anda mendapat diskon sebesar 10% jadi total harga Rp:", totalHarga)
+           
+        elif pesan == "d":
+            print ("Caramel Machiatto")
+            Jumlah_pesanan = int(input("masukkan jumlah pesanan ="))
+            harga=int(input("masukkan harga menu :"))
+            d=(harga*Jumlah_pesanan)
+            if Jumlah_pesanan >= 3:
+                diskon = int(d*0.1)
+                totalHarga=int(diskon)
+                print  ("anda mendapat diskon sebesar 10% jadi total harga Rp :", totalHarga)
+            
+        elif pesan == "e":
+            print ("Asian Dolce Latte")
+            Jumlah_pesanan = int(input("masukkan jumlah pesanan ="))
+            harga=int(input("masukkan harga menu :"))
+            e=(harga*Jumlah_pesanan)
+            if Jumlah_pesanan >= 3:
+                diskon = int(e*0.1)
+                totalHarga=int(diskon)
+                print  ("anda mendapat diskon sebesar 10% jadi total harga Rp:", totalHarga)
+        Metode_bayar = input("apakah bayar dengan emoney (Y/T) :")
+        if Metode_bayar == "Y" :
+            diskon = int(totalHarga*0.05)
+            totalHarga = int(diskon)
+            print  (" karena membayar dengan emoney anda mendapat diskon sebesar 5% jadi total harga:", totalHarga)
+        if Metode_bayar == "T" :
+            print  ("karena anda tidak mebayar dengan emoney anda tidak mendapat diskon jadi total harga Rp :", totalHarga)
+    
+        kapan = input("apakah beli saat weekend (Y/T) :")
+        if kapan == "Y" :
+            diskon = int(totalHarga*0.05)
+            totalHarga = int(diskon)
+            print  ("karena anda mebeli pada saat weekend jadi anda mendapa diskon tambahan sebesar 5% jadi total harga Rp:", totalHarga)
+        if kapan == "T" :
+            diskon = int(totalHarga*0.1)
+            totalHarga = int(diskon)
+            print  ("karena anda membeli pada saat weekdays jadi anda mendapat diskon tambhan sebesar 10% total harga Rp:", totalHarga)
+        lanjut = input("apakah ingin belanja lagi (Y/T) :")
+        if lanjut == "T" :
+            print ("terima kasih sudah berbelanja")
+    elif menu == "6":
+        print("TERIMA KASIH") 
+        exit()
+        
+while True :
+    show_menu()
+    print()
